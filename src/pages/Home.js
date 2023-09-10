@@ -90,7 +90,7 @@ export default function Home() {
               
             </>
           )}
-          {title && !loading && submitSearch && results.length == 0 && (<p className='text-center p-3'>No movies were found.</p>)}
+          {title && !error && !loading && submitSearch && results.length == 0 && (<p className='text-center p-3'>No movies were found.</p>)}
           {title && !error && loading && (<p className='text-center p-3'>Loading...</p>)}
           {error && (<p className='text-center p-3 text-danger'>{error}</p>)}
           {!error && !submitSearch && (!results || results.length == 0) && (<p className='text-muted text-center p-3'>Your search results will appear here. Happy searching 😊</p>)}
