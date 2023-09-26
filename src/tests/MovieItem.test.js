@@ -21,9 +21,9 @@ test('renders the movie item component with the correct data', () => {
 
 test('renders the poster image with the correct src and alt attributes', () => {
     const src = movie.Poster;
-    const alt = movie.Poster;
+    const alt = movie.Title;
   
-    const { getByAltText } = render(<img src={src} alt={alt} className='img' />);
+    const { getByAltText } = render(<img src={src} alt={alt} className='img rounded' />);
     const imageElement = getByAltText(alt);
   
     expect(imageElement).toBeInTheDocument();

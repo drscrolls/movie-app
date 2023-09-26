@@ -5,7 +5,7 @@ export default function MovieItem({movie, key}) {
   return (
     <div key={key} className='col-3 border-bottom p-2'>
       <div className='col-12'>
-        <img src={Poster} alt={Poster} className='img rounded'/>
+        <img src={Poster} alt={Title} className='img rounded'/>
       </div>
       <div className='col-12 mt-2'>
         <h6>{Title}</h6>
