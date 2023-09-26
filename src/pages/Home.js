@@ -84,9 +84,10 @@ export default function Home() {
         <div>
           {!loading && results && results.length > 0 && (
             <>
-              <ResultsHeader/>
-
-              {results.map((movie, index) => (<MovieItem movie={movie} key={index}/>))}
+              <ResultsHeader title={title}/>
+              <div className="row">
+                {results.map((movie, index) => (<MovieItem movie={movie} key={index}/>))}
+              </div>
               
             </>
           )}

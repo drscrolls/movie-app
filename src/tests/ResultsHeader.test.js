@@ -1,13 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import ResultsHeader from '../components/ResultsHeader';
 
+const titleName = "test"
 test('renders titles on header', () => {
-  render(<ResultsHeader />);
-  const posterElement = screen.getByText(/Poster/i);
-  const titleElement = screen.getByText(/Title/i);
-  const yearElement = screen.getByText(/Year/i);
+  const { getByText } = render(<ResultsHeader title={titleName} />);
 
-  expect(posterElement).toBeInTheDocument();
+  const headerElement = getByText(/Here are the results with keyword/i);
+  const titleElement = getByText(/test/i);
+
+  expect(headerElement).toBeInTheDocument();
   expect(titleElement).toBeInTheDocument();
-  expect(yearElement).toBeInTheDocument();
+  
 });
+
